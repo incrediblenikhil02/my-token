@@ -1,24 +1,88 @@
-Hello World
-This Solidity program is a simple "Hello World" program that demonstrates the basic syntax and functionality of the Solidity programming language. The purpose of this program is to serve as a starting point for those who are new to Solidity and want to get a feel for how it works.
+# Create a Token
 
-Description
-This program is a simple contract written in Solidity, a programming language used for developing smart contracts on the Ethereum blockchain. The contract has a single function that returns the string "Hello World!". This program serves as a simple and straightforward introduction to Solidity programming, and can be used as a stepping stone for more complex projects in the future.
+This project involves creating a simple smart contract for a token on the Ethereum blockchain. The token contract will have functionalities to mint and burn tokens. It will keep track of the token name, abbreviation, total supply, and the balances of different addresses.
 
-Getting Started
-Executing program
-To run this program, you can use Remix, an online Solidity IDE. To get started, go to the Remix website at https://remix.ethereum.org/.
+## Description
 
-Once you are on the Remix website, create a new file by clicking on the "+" icon in the left-hand sidebar. Save the file with a .sol extension (e.g., HelloWorld.sol). Copy and paste the following code into the file:
+The MyToken smart contract is designed to manage a token named META with the abbreviation META. The contract includes public variables to store the token's details, a mapping to track balances of different addresses, and functions to mint and burn tokens. The mint function increases the total supply and the balance of a specified address, while the burn function decreases the total supply and the balance of a specified address, ensuring that the address has sufficient balance to burn the specified amount.
 
-pragma solidity ^0.8.4;
+## Getting Started
 
-contract HelloWorld {
-    function sayHello() public pure returns (string memory) {
-        return "Hello World!";
-    }
-}
-To compile the code, click on the "Solidity Compiler" tab in the left-hand sidebar. Make sure the "Compiler" option is set to "0.8.4" (or another compatible version), and then click on the "Compile HelloWorld.sol" button.
+### Installing
+To get started with this project, you'll need to have the following installed:
 
-Once the code is compiled, you can deploy the contract by clicking on the "Deploy & Run Transactions" tab in the left-hand sidebar. Select the "HelloWorld" contract from the dropdown menu, and then click on the "Deploy" button.
+* Node.js
+* npm (Node Package Manager)
+* Truffle or Hardhat (for Ethereum development)
+* MetaMask (for interacting with the Ethereum network)
+* How/Where to Download Your Program
 
-Once the contract is deployed, you can interact with it by calling the sayHello function. Click on the "HelloWorld" contract in the left-hand sidebar, and then click on the "sayHello" function. Finally, click on the "transact" button to execute the function and retrieve the "Hello World!" message.
+Clone the repository from GitHub:
+```
+git clone https://github.com/yourusername/yourrepository.git
+cd yourrepository
+```
+### Any Modifications Needed to Be Made to Files/Folders
+
+Ensure that you have a '.env' file with your Ethereum network configuration if you're using a deployment tool like Truffle or Hardhat.
+
+### Executing program
+
+#### How to Run the Program
+1. Compile the smart contract:
+```
+truffle compile
+```
+or
+
+```
+npx hardhat compile
+```
+
+2. Deploy the smart contract:
+
+```
+truffle migrate --network your_network
+```
+
+or
+
+```
+npx hardhat run scripts/deploy.js --network your_network
+```
+
+### Step-by-Step Bullets
+1. Clone the repository.
+2. Install the necessary dependencies.
+3. Compile the smart contract.
+4. Deploy the smart contract to your desired network.
+
+```
+git clone https://github.com/yourusername/yourrepository.git
+cd yourrepository
+npm install
+truffle compile
+truffle migrate --network your_network
+```
+## Help
+### Any Advice for Common Problems or Issues
+* Ensure your Ethereum client is running if you're deploying to a local network.
+* Check your MetaMask configuration for the correct network.
+* Verify your .env file for the correct network and private key setup.
+### Command to Run if Program Contains Helper Info
+If your program contains helper info, run:
+```
+npx hardhat help
+```
+
+## Authors
+
+Nikhil Tripathi
+@incrediblenikhil02
+@Great_Alys
+
+
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details
